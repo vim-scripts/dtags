@@ -1,0 +1,4 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=59
+
+This Perl script scans (a given or local) directory tree for Delphi/Kylix files and prints a tag-file to stdout.
+
