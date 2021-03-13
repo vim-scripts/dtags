@@ -9,7 +9,8 @@ my (@files, $lfn, $fn);
 my (@matches, $longfunc, $shortfunc);
 my $dircmd;
 
-if    ($ENV{'OS'}=~/WINNT/i)	{ $dircmd="cmd /c dir /b /s $startdir"; }
+if    ($^O eq 'cygwin')	        { $dircmd="find $startdir"; }
+elsif ($ENV{'OS'}=~/WINNT/i)	{ $dircmd="cmd /c dir /b /s $startdir"; }
 elsif ($ENV{'OS'}=~/WIN/i)	{ $dircmd="command /c dir /b /s $startdir"; }
 else 				{ $dircmd="find $startdir"; }
 
